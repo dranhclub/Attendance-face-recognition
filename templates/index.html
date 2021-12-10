@@ -1,15 +1,302 @@
 <!DOCTYPE html>
-<html>
+<html style="font-size: 16px;">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Hệ thống điểm danh bằng nhận diện khuôn mặt">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <title>Điểm danh</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }} " media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Điểm-danh.css') }}" media="screen">
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+  <meta name="generator" content="Nicepage 4.1.0, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
 
 
-  <body>
-    <h1>Face recognition</h1>
-    <div>
 
-        <img src="{{ url_for('video') }}" width="50%" alt="Video streaming"/>
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/3.BVP-Logoviettattienganh.png"
+}</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Điểm danh">
+  <meta property="og:type" content="website">
+</head>
+
+<body data-home-page="Điểm-danh.html" data-home-page-title="Điểm danh" class="u-body">
+  <header class="u-clearfix u-grey-15 u-header u-header" id="sec-88c1">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1784" data-image-height="353">
+        <img src="{{ url_for('static', filename='images/3.BVP-Logoviettattienganh.png') }}" class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                  <rect y="1" width="16" height="2"></rect>
+                  <rect y="7" width="16" height="2"></rect>
+                  <rect y="13" width="16" height="2"></rect>
+                </symbol>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="Điểm-danh.html" style="padding: 10px 20px;">Điểm danh</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="Danh-sách-lớp.html" style="padding: 10px 20px;">Danh sách lớp</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="Liên-hệ.html" style="padding: 10px 20px;">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Điểm-danh.html"
+                    style="padding: 10px 20px;">Điểm danh</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Danh-sách-lớp.html"
+                    style="padding: 10px 20px;">Danh sách lớp</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Liên-hệ.html"
+                    style="padding: 10px 20px;">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
     </div>
-            
-    </body>
+  </header>
+  <section class="u-clearfix u-section-1" id="carousel_49a0">
+    <div
+      class="u-expanded-height-lg u-expanded-height-md u-expanded-height-xl u-palette-2-base u-shape u-shape-rectangle u-shape-1"
+      data-animation-name="slideIn" data-animation-duration="1000" data-animation-direction="Down"
+      data-animation-delay="0"></div>
+    <div class="u-container-style u-group u-image u-image-tiles u-image-1" data-image-width="100"
+      data-image-height="60">
+      <div class="u-container-layout u-container-layout-1"></div>
+    </div>
+    <div class="u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          <div class="u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
+            <div class="u-container-layout u-container-layout-2">
+              <h4 class="u-text u-text-1">Powered by AI</h4>
+              <h2 class="u-custom-font u-font-oswald u-text u-text-2">Hệ thống điểm danh bằng nhận diện khuôn mặt</h2>
+              <p class="u-text u-text-3">Hãy đứng trước camera để hệ thống tự động nhận diện và điểm danh cho bạn</p>
+            </div>
+          </div>
+          <!-- Video -->
+          <div class="u-container-style u-image u-layout-cell u-right-cell u-size-36 u-image-2" data-image-width="1200"
+            data-image-height="1200" style="border: 3px dashed black; display: flex; justify-content: center; align-items: center;">
+            <!-- <div class="u-border-5 u-border-grey-75 u-container-layout"></div> -->
+            <img src="{{ url_for('video') }}" width="666px" height="588px" alt="Video streaming"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-clearfix u-section-2" id="sec-e79c">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-expanded-width u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div
+            class="u-border-1 u-border-grey-75 u-container-style u-list-item u-radius-5 u-repeater-item u-shape-round">
+            <div class="u-container-layout u-similar-container u-container-layout-1">
+              <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-1"
+                src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="" data-image-width="1024"
+                data-image-height="1024"><span class="u-icon u-icon-circle u-text-custom-color-2 u-icon-1"><svg
+                  class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9054"></use>
+                </svg><svg class="u-svg-content" viewBox="0 0 60 60" id="svg-9054">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: currentColor;
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1"
+                    d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z"
+                    id="check" transform="translate(-770 -450)"></path>
+                </svg></span>
+              <p class="u-large-text u-text u-text-default u-text-variant u-text-1">Nguyễn Huy Hoàng</p>
+            </div>
+          </div>
+          <div
+            class="u-border-1 u-border-grey-75 u-container-style u-list-item u-radius-5 u-repeater-item u-shape-round">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+              <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-2"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Faenza-avatar-default-symbolic.svg/1024px-Faenza-avatar-default-symbolic.svg.png"
+                alt="" data-image-width="1024" data-image-height="1024"><span
+                class="u-icon u-icon-circle u-text-custom-color-2 u-icon-2"><svg class="u-svg-link"
+                  preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-28b3"></use>
+                </svg><svg class="u-svg-content" viewBox="0 0 60 60" id="svg-28b3">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: currentColor;
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1"
+                    d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z"
+                    id="check" transform="translate(-770 -450)"></path>
+                </svg></span>
+              <p class="u-large-text u-text u-text-default u-text-variant u-text-2">Sample Headline</p>
+            </div>
+          </div>
+          <div
+            class="u-border-1 u-border-grey-75 u-container-style u-list-item u-radius-5 u-repeater-item u-shape-round">
+            <div class="u-container-layout u-similar-container u-container-layout-3">
+              <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-3"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Faenza-avatar-default-symbolic.svg/1024px-Faenza-avatar-default-symbolic.svg.png"
+                alt="" data-image-width="1024" data-image-height="1024"><span
+                class="u-icon u-icon-circle u-text-custom-color-2 u-icon-3"><svg class="u-svg-link"
+                  preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0e5b"></use>
+                </svg><svg class="u-svg-content" viewBox="0 0 60 60" id="svg-0e5b">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: currentColor;
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1"
+                    d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z"
+                    id="check" transform="translate(-770 -450)"></path>
+                </svg></span>
+              <p class="u-large-text u-text u-text-default u-text-variant u-text-3">Mạc Văn Thiêm</p>
+            </div>
+          </div>
+          <div
+            class="u-border-1 u-border-grey-75 u-container-style u-list-item u-radius-5 u-repeater-item u-shape-round">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
+              <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-4"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Faenza-avatar-default-symbolic.svg/1024px-Faenza-avatar-default-symbolic.svg.png"
+                alt="" data-image-width="1024" data-image-height="1024"><span
+                class="u-icon u-icon-circle u-text-custom-color-2 u-icon-4"><svg class="u-svg-link"
+                  preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-154d"></use>
+                </svg><svg class="u-svg-content" viewBox="0 0 60 60" id="svg-154d">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: currentColor;
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1"
+                    d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z"
+                    id="check" transform="translate(-770 -450)"></path>
+                </svg></span>
+              <p class="u-large-text u-text u-text-default u-text-variant u-text-4">Sample Headline</p>
+            </div>
+          </div>
+          <div
+            class="u-border-1 u-border-grey-75 u-container-style u-list-item u-radius-5 u-repeater-item u-shape-round">
+            <div class="u-container-layout u-similar-container u-container-layout-5">
+              <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-5"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Faenza-avatar-default-symbolic.svg/1024px-Faenza-avatar-default-symbolic.svg.png"
+                alt="" data-image-width="1024" data-image-height="1024"><span
+                class="u-icon u-icon-circle u-text-custom-color-2 u-icon-5"><svg class="u-svg-link"
+                  preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-28f0"></use>
+                </svg><svg class="u-svg-content" viewBox="0 0 60 60" id="svg-28f0">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: currentColor;
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1"
+                    d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z"
+                    id="check" transform="translate(-770 -450)"></path>
+                </svg></span>
+              <p class="u-large-text u-text u-text-default u-text-variant u-text-5">Sample Headline</p>
+            </div>
+          </div>
+          <div
+            class="u-border-1 u-border-grey-75 u-container-style u-list-item u-radius-5 u-repeater-item u-shape-round">
+            <div class="u-container-layout u-similar-container u-container-layout-6">
+              <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-6"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Faenza-avatar-default-symbolic.svg/1024px-Faenza-avatar-default-symbolic.svg.png"
+                alt="" data-image-width="1024" data-image-height="1024"><span
+                class="u-icon u-icon-circle u-text-custom-color-2 u-icon-6"><svg class="u-svg-link"
+                  preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style="">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7097"></use>
+                </svg><svg class="u-svg-content" viewBox="0 0 60 60" id="svg-7097">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: currentColor;
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1"
+                    d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z"
+                    id="check" transform="translate(-770 -450)"></path>
+                </svg></span>
+              <p class="u-large-text u-text u-text-default u-text-variant u-text-6">Sample Headline</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-532c">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">Trường Đại học Bách Khoa Hà Nội</p>
+    </div>
+  </footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <span>Website Templates</span>
+    </a>
+    <p class="u-text">
+      <span>created with</span>
+    </p>
+    <a class="u-link" href="" target="_blank">
+      <span>Website Builder Software</span>
+    </a>.
+  </section>
+</body>
 
 </html>
