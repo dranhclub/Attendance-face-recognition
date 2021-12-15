@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='Điểm-danh.css') }}" media="screen">
   <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
   <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
   <link id="u-page-google-font" rel="stylesheet"
@@ -116,35 +117,25 @@
     </div>
   </section>
 
+  <!------------------------------------ STUDENT LIST --------------------------------------- -->
   <div class="container px-4 mt-5">
-    <div class="row gx-5">
-      <!-- One student -->
-      <div class="col-6">
-        <div class="p-2 border bg-light d-flex align-items-center">
-          <img src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="avt"
-            width="50px" height="50px">
-          <div class="flex-grow-1 pl-3">Nguyễn Huy Hoàng</div>
-          <i class="fas fa-check-circle" style="font-size: 2rem; color: green;"></i>
-        </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center m-2">
+        <button class="btn btn-primary">Update list</button>
       </div>
-      <!-- One student -->
-      <div class="col-6">
-        <div class="p-2 border bg-light d-flex align-items-center">
-          <img src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="avt"
-            width="50px" height="50px">
-          <div class="flex-grow-1 pl-3">Nguyễn Huy Hoàng</div>
-          <i class="fas fa-check-circle" style="font-size: 2rem; color: green;"></i>
+    </div>
+    <div class="row gx-5" id="student-list">
+      {% for name in known_face_names %}
+        <!-- One student -->
+        <div class="col-6">
+          <div class="p-2 border bg-light d-flex align-items-center">
+            <img src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="avt"
+              width="50px" height="50px">
+            <div class="flex-grow-1 pl-3">{{name}}</div>
+            <i class="fas fa-check-circle" style="font-size: 2rem; color: red;" id="status-{{name}}"></i>
+          </div>
         </div>
-      </div>
-      <!-- One student -->
-      <div class="col-6">
-        <div class="p-2 border bg-light d-flex align-items-center">
-          <img src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="avt"
-            width="50px" height="50px">
-          <div class="flex-grow-1 pl-3">Nguyễn Huy Hoàng</div>
-          <i class="fas fa-check-circle" style="font-size: 2rem; color: green;"></i>
-        </div>
-      </div>
+      {%endfor%}
     </div>
   </div>
 
@@ -176,12 +167,26 @@
       <span>Website Builder Software</span>
     </a>.
   </section>
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $.ajax({
+          url: "/listen", success: function (result) {
+            result.attendence_list.forEach(name => {
+              $(`#status-${name}`).css("color", "green");
+              console.log(`status-${name} set green`);
+            });
+            console.log(result);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
