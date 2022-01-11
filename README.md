@@ -10,7 +10,7 @@ Computer Vision final assignment
 - face_recognition
 - Flask
 
-## How to install face_recognition
+## How to install face_recognition library
 - Visit [face_recognition](https://github.com/ageitgey/face_recognition) for detail
 - Following is my way to install face_recognition library in Windows
 
@@ -31,5 +31,10 @@ Computer Vision final assignment
 
 
 ## How to run
-- First, prepare images of known faces in folder `face_img`, (use JPG extension)
-- Run webapp using command `python app.py`
+- Run with cmd:
+- `cd` to project directory
+- `set FLASK_APP=diemdanh`
+- `set FLASK_ENV=development`
+- Init database before run (optional): `flask init-db`
+- `flask run`
+

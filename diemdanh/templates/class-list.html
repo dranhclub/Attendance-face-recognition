@@ -52,11 +52,11 @@
           <ul class="u-nav u-unstyled u-nav-1">
             <li class="u-nav-item"><a
                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                href="Điểm-danh.html" style="padding: 10px 20px;">Điểm danh</a>
+                href="/" style="padding: 10px 20px;">Điểm danh</a>
             </li>
             <li class="u-nav-item"><a
                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                href="Danh-sách-lớp.html" style="padding: 10px 20px;">Danh sách lớp</a>
+                href="/class-list" style="padding: 10px 20px;">Danh sách lớp</a>
             </li>
             <li class="u-nav-item"><a
                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
@@ -69,10 +69,10 @@
             <div class="u-inner-container-layout u-sidenav-overflow">
               <div class="u-menu-close"></div>
               <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Điểm-danh.html"
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/"
                     style="padding: 10px 20px;">Điểm danh</a>
                 </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Danh-sách-lớp.html"
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/class-list"
                     style="padding: 10px 20px;">Danh sách lớp</a>
                 </li>
                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Liên-hệ.html"
@@ -86,57 +86,42 @@
       </nav>
     </div>
   </header>
-  <section class="u-clearfix u-section-1" id="carousel_49a0">
-    <div
-      class="u-expanded-height-lg u-expanded-height-md u-expanded-height-xl u-palette-2-base u-shape u-shape-rectangle u-shape-1"
-      data-animation-name="slideIn" data-animation-duration="1000" data-animation-direction="Down"
-      data-animation-delay="0"></div>
-    <div class="u-container-style u-group u-image u-image-tiles u-image-1" data-image-width="100"
-      data-image-height="60">
-      <div class="u-container-layout u-container-layout-1"></div>
-    </div>
-    <div class="u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
-      <div class="u-layout">
-        <div class="u-layout-row">
-          <div class="u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
-            <div class="u-container-layout u-container-layout-2">
-              <h4 class="u-text u-text-1">Powered by AI</h4>
-              <h2 class="u-custom-font u-font-oswald u-text u-text-2">Hệ thống điểm danh bằng nhận diện khuôn mặt</h2>
-              <p class="u-text u-text-3">Hãy đứng trước camera để hệ thống tự động nhận diện và điểm danh cho bạn</p>
-            </div>
-          </div>
-          <!-- Video -->
-          <div class="u-container-style u-image u-layout-cell u-right-cell u-size-36 u-image-2" data-image-width="1200"
-            data-image-height="1200"
-            style="border: 3px dashed black; display: flex; justify-content: center; align-items: center;">
-            <!-- <div class="u-border-5 u-border-grey-75 u-container-layout"></div> -->
-            <img src="{{ url_for('video') }}" width="666px" height="588px" alt="Video streaming" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!------------------------------------ STUDENT LIST --------------------------------------- -->
   <div class="container px-4 mt-5">
-    <div class="row">
-      <div class="col d-flex justify-content-center m-2">
-        <button class="btn btn-primary">Update list</button>
-      </div>
-    </div>
-    <div class="row gx-5" id="student-list">
-      {% for name in known_face_names %}
-        <!-- One student -->
-        <div class="col-6">
-          <div class="p-2 border bg-light d-flex align-items-center">
-            <img src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="avt"
-              width="50px" height="50px">
-            <div class="flex-grow-1 pl-3">{{name}}</div>
-            <i class="fas fa-check-circle" style="font-size: 2rem; color: red;" id="status-{{name}}"></i>
-          </div>
-        </div>
-      {%endfor%}
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Họ và tên</th>
+          <th scope="col">Ảnh cung cấp</th>
+          <th scope="col">Encoding face</th>
+          <th scope="col">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <th scope="row">{{student['id']}}</th>
+          <td>{{student['name']}}</td>
+          <td><img src="{{student['img']}}" alt="" width="80px" height="100px"></td>
+          <td><textarea name="" id="" cols="30" rows="5">{{student['encoding_face']}}</textarea></td>
+          <td> <button> <a href="{{url_for('diemdanh.delete', id=student['id'])}}">Xoá</a></button> </td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <form method="post" enctype="multipart/form-data">
+            <th scope="row"> + </th>
+            <td> <input type="text" name='name' required> </td>
+            <td> <img id='pre-img' width="80px" height="100px"></img> <input type="file" id="inp"> </td>
+            <td> - </td>
+            <td> <button type="submit">Thêm SV</button> </td>
+            <input type="text" name="img" id="img" hidden>
+          </form>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <pre>
@@ -172,21 +157,29 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <script>
-    $(document).ready(function () {
-      $("button").click(function () {
-        $.ajax({
-          url: "/listen", success: function (result) {
-            result.attendence_list.forEach(name => {
-              $(`#status-${name}`).css("color", "green");
-              console.log(`status-${name} set green`);
-            });
-            console.log(result);
-          }
-        });
-      });
-    });
+    function readFile() {
+  
+      if (this.files && this.files[0]) {
+        
+        var FR= new FileReader();
+        
+        FR.addEventListener("load", function(e) {
+          document.getElementById("pre-img").src       = e.target.result;
+          // document.getElementById("b64").innerHTML = e.target.result;
+          console.log(e.target.result);
+          document.getElementById("img").setAttribute('value', e.target.result);
+        }); 
+        
+        FR.readAsDataURL( this.files[0] );
+      }
+      
+    }
+
+    document.getElementById("inp").addEventListener("change", readFile);
   </script>
+
 </body>
 
 </html>

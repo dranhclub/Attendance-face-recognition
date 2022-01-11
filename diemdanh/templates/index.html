@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Điểm danh</title>
+  
+  <!-- Nicepage CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }} " media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Điểm-danh.css') }}" media="screen">
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body data-home-page="Điểm-danh.html" data-home-page-title="Điểm danh" class="u-body">
+  <header class="u-clearfix u-grey-15 u-header u-header" id="sec-88c1">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1784" data-image-height="353">
+        <img src="{{ url_for('static', filename='images/3.BVP-Logoviettattienganh.png') }}"
+          class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                  <rect y="1" width="16" height="2"></rect>
+                  <rect y="7" width="16" height="2"></rect>
+                  <rect y="13" width="16" height="2"></rect>
+                </symbol>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="/" style="padding: 10px 20px;">Điểm danh</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="/class-list" style="padding: 10px 20px;">Danh sách lớp</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="Liên-hệ.html" style="padding: 10px 20px;">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/"
+                    style="padding: 10px 20px;">Điểm danh</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/class-list"
+                    style="padding: 10px 20px;">Danh sách lớp</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Liên-hệ.html"
+                    style="padding: 10px 20px;">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="u-clearfix u-section-1" id="carousel_49a0">
+    <div
+      class="u-expanded-height-lg u-expanded-height-md u-expanded-height-xl u-palette-2-base u-shape u-shape-rectangle u-shape-1"
+      data-animation-name="slideIn" data-animation-duration="1000" data-animation-direction="Down"
+      data-animation-delay="0"></div>
+    <div class="u-container-style u-group u-image u-image-tiles u-image-1" data-image-width="100"
+      data-image-height="60">
+      <div class="u-container-layout u-container-layout-1"></div>
+    </div>
+    <div class="u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          <div class="u-container-style u-layout-cell u-left-cell u-size-24 u-layout-cell-1">
+            <div class="u-container-layout u-container-layout-2">
+              <h4 class="u-text u-text-1">Powered by AI</h4>
+              <h2 class="u-custom-font u-font-oswald u-text u-text-2">Hệ thống điểm danh bằng nhận diện khuôn mặt</h2>
+              <p class="u-text u-text-3">Hãy đứng trước camera để hệ thống tự động nhận diện và điểm danh cho bạn</p>
+            </div>
+          </div>
+          <!-- Video -->
+          <div class="u-container-style u-image u-layout-cell u-right-cell u-size-36 u-image-2" data-image-width="1200"
+            data-image-height="1200"
+            style="border: 3px dashed black; display: flex; justify-content: center; align-items: center;">
+            <!-- <div class="u-border-5 u-border-grey-75 u-container-layout"></div> -->
+            <img src="{{ url_for('diemdanh.video') }}" width="666px" height="588px" alt="Video streaming" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------------------------------ STUDENT LIST --------------------------------------- -->
+  <div class="container px-4 mt-5">
+    <div class="row">
+      <div class="col d-flex justify-content-center m-2">
+      </div>
+    </div>
+    <div class="row gx-5" id="student-list">
+      {% for student in students %}
+        <!-- One student -->
+        <div class="col-6">
+          <div class="p-2 border bg-light d-flex align-items-center">
+            <img src="{{ url_for('static', filename='images/1024px-Faenza-avatar-default-symbolic.svg.png') }}" alt="avt"
+              width="50px" height="50px">
+            <div class="flex-grow-1 pl-3">{{student['name']}}</div>
+            <i class="fas fa-check-circle" style="font-size: 2rem; color: green;" id="status-{{student['id']}}" hidden></i>
+          </div>
+        </div>
+      {%endfor%}
+    </div>
+  </div>
+
+  <pre>
+
+
+
+
+
+
+
+  </pre>
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-532c">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">Trường Đại học Bách Khoa Hà Nội</p>
+    </div>
+  </footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <span>Website Templates</span>
+    </a>
+    <p class="u-text">
+      <span>created with</span>
+    </p>
+    <a class="u-link" href="" target="_blank">
+      <span>Website Builder Software</span>
+    </a>.
+  </section>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      
+      setInterval(()=>{
+        $.ajax({
+          url: "/listen", success: function (result) {
+            console.log(result);
+            result.attendence_set.forEach(attendId => {
+              $(`#status-${attendId}`).removeAttr('hidden');
+              console.log(`status-${attendId} set green`);
+            });
+          }
+        });
+      }, 500);
+
+      // $("#get-info").click(function () {
+      //   $.ajax({
+      //     url: "/listen", success: function (result) {
+      //       console.log(result);
+      //       result.attendence_set.forEach(attendId => {
+      //         $(`#status-${attendId}`).removeAttr('hidden');
+      //         console.log(`status-${attendId} set green`);
+      //       });
+      //     }
+      //   });
+      // });
+    });
+  </script>
+</body>
+
+</html>
